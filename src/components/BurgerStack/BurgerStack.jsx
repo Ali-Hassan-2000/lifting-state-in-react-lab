@@ -2,7 +2,7 @@ import Ingredient from '../Ingredient/Ingredient';
 
 const BurgerStack = (props) => {
   return (
-    <>
+    <div>
         {props.stack.length === 0 ? ( <p>No Ingredients</p> ) : 
         (
             <ul>
@@ -17,7 +17,7 @@ const BurgerStack = (props) => {
                 ))}
             </ul>
         )}
-    </>
+    </div>
   );
 };
 

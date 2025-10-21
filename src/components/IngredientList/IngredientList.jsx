@@ -2,7 +2,7 @@ import Ingredient from '../Ingredient/Ingredient';
 
 const IngredientList = (props) => {
   return (
-    <>
+    <div>
         <ul>
             {props.ingredients.map((ingredient, index) => (
                 <Ingredient
@@ -14,7 +14,7 @@ const IngredientList = (props) => {
                 />
             ))}
         </ul>
-    </>
+    </div>
   );
 };
 
