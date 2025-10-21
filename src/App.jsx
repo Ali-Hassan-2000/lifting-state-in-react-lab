@@ -21,6 +21,23 @@ const App = () => {
     { name: 'Swiss Cheese', color: '#F1E1A8' },
   ];
 
+  const [stack, setStack] = useState([]);
+
+    const addToBurger = (ingredient) => {
+    setStack([...stack, ingredient]);
+  };
+
+  const removeFromBurger = (ingredientToRemove) => {
+    
+    const index = stack.findIndex(ingredient => ingredient.name === ingredientToRemove.name);
+    
+    if (index !== -1) {
+      const newStack = [...stack];
+      newStack.splice(index, 1);
+      setStack(newStack);
+    }
+  };
+
   return (
     <main>
       <h1>Burger Stacker</h1>
