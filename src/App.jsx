@@ -1,4 +1,5 @@
 import './App.css';
+import { useState } from 'react';
 
 import IngredientList from './components/IngredientList/IngredientList.jsx';
 import BurgerStack from './components/BurgerStack/BurgerStack.jsx';
@@ -42,8 +43,8 @@ const App = () => {
     <main>
       <h1>Burger Stacker</h1>
       <section>
-        <IngredientList />
-        <BurgerStack />
+        <IngredientList ingredients={availableIngredients} addToBurger={addToBurger}/>
+        <BurgerStack stack={stack} removeFromBurger={removeFromBurger}/>
       </section>
     </main>
   );

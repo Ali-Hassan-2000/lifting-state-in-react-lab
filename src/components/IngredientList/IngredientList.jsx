@@ -1,3 +1,5 @@
+import Ingredient from '../Ingredient/Ingredient';
+
 const IngredientList = (props) => {
   return <ul>// map through props.ingredients</ul>;
 };
