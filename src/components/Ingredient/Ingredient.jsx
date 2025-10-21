@@ -2,12 +2,8 @@ const Ingredient = ({ ingredient, onAdd, onRemove, showAddButton, showRemoveButt
   return (
     <li style={{ backgroundColor: ingredient.color }}>
       {ingredient.name}
-      {showAddButton && (
-        <button onClick={() => onAdd(ingredient)}>+</button>
-      )}
-      {showRemoveButton && (
-        <button onClick={() => onRemove(ingredient)}>X</button>
-      )}
+      {showAddButton && ( <button onClick={() => onAdd(ingredient)}>+</button> )}
+      {showRemoveButton && ( <button onClick={() => onRemove(ingredient)}>X</button> )}
     </li>
   );
 };

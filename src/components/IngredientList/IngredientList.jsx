@@ -1,7 +1,21 @@
 import Ingredient from '../Ingredient/Ingredient';
 
 const IngredientList = (props) => {
-  return <ul>// map through props.ingredients</ul>;
+  return (
+    <>
+        <ul>
+            {props.ingredients.map((ingredient, index) => (
+                <Ingredient
+                    key={index}
+                    ingredient={ingredient}
+                    onAdd={props.addToBurger}
+                    showAddButton={true}
+                    showRemoveButton={false}
+                />
+            ))}
+        </ul>
+    </>
+  );
 };
 
 export default IngredientList;
